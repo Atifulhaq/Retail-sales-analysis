@@ -26,7 +26,7 @@ The analysis was completed using Excel and SQL, with an interactive Excel dashbo
 
 ## Project Structure
 
-
+```text
 retail-sales-analysis/
 ├── excel/
 │   └── retail_sales_analysis.xlsx
