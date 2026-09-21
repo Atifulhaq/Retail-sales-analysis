@@ -2,7 +2,30 @@
 -- SQL analysis of the Superstore retail sales dataset
 
 CREATE TABLE retail_sales (
-  -- 1. Overall sales and profit
+    row_id INT,
+    order_id INT,
+    order_date DATE,
+    order_priority VARCHAR(20),
+    order_quantity INT,
+    sales DECIMAL(12,2),
+    discount DECIMAL(5,2),
+    ship_mode VARCHAR(50),
+    profit DECIMAL(12,2),
+    unit_price DECIMAL(12,2),
+    shipping_cost DECIMAL(12,2),
+    customer_name VARCHAR(100),
+    province VARCHAR(100),
+    region VARCHAR(100),
+    customer_segment VARCHAR(50),
+    product_category VARCHAR(50),
+    product_sub_category VARCHAR(100),
+    product_name VARCHAR(255),
+    product_container VARCHAR(100),
+    product_base_margin DECIMAL(5,2),
+    ship_date DATE
+);
+
+-- 1. Overall sales and profit
 
 SELECT
     SUM(sales) AS total_sales,
@@ -70,25 +93,3 @@ SELECT
 FROM retail_sales
 GROUP BY product_category
 ORDER BY profit_margin DESC;
-    row_id INT,
-    order_id INT,
-    order_date DATE,
-    order_priority VARCHAR(20),
-    order_quantity INT,
-    sales DECIMAL(12,2),
-    discount DECIMAL(5,2),
-    ship_mode VARCHAR(50),
-    profit DECIMAL(12,2),
-    unit_price DECIMAL(12,2),
-    shipping_cost DECIMAL(12,2),
-    customer_name VARCHAR(100),
-    province VARCHAR(100),
-    region VARCHAR(100),
-    customer_segment VARCHAR(50),
-    product_category VARCHAR(50),
-    product_sub_category VARCHAR(100),
-    product_name VARCHAR(255),
-    product_container VARCHAR(100),
-    product_base_margin DECIMAL(5,2),
-    ship_date DATE
-);
