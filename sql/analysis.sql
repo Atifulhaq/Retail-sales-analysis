@@ -1,6 +1,16 @@
 -- Retail Sales Analysis
 -- SQL analysis of the Superstore retail sales dataset
 
+-- Business questions:
+-- 1. What are the overall sales and profit?
+-- 2. Which product categories generate the most profit?
+-- 3. Which products are generating losses?
+-- 4. Which product sub-categories are most and least profitable?
+-- 5. Does average discount vary across product sub-categories?
+-- 6. Which regions generate the most sales and profit?
+-- 7. What is the profit margin by product category?
+-- 8. Which products are the most profitable?
+
 CREATE TABLE retail_sales (
     row_id INT,
     order_id INT,
@@ -93,3 +103,14 @@ SELECT
 FROM retail_sales
 GROUP BY product_category
 ORDER BY profit_margin DESC;
+
+-- 8. Top 10 most profitable products
+
+SELECT
+    product_name,
+    SUM(sales) AS total_sales,
+    SUM(profit) AS total_profit
+FROM retail_sales
+GROUP BY product_name
+ORDER BY total_profit DESC
+LIMIT 10;
