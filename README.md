@@ -41,6 +41,8 @@ retail-sales-analysis/
 
 ## Dashboard
 
+![Retail Sales Dashboard](excel/dashboard.png)
+
 The Excel dashboard presents key sales and profitability metrics, including:
 
 - Total Sales
