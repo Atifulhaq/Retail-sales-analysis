@@ -33,6 +33,11 @@ retail-sales-analysis/
 ├── sql/
 │   └── analysis.sql
 └── README.md
+```
+
+
+
+
 
 ## Dashboard
 
@@ -44,7 +49,7 @@ The Excel dashboard presents key sales and profitability metrics, including:
 - Sales by Product Category
 - Profit by Product Category
 
-  ## Skills Demonstrated
+## Skills Demonstrated
 
 - Data cleaning and validation
 - Excel data analysis
